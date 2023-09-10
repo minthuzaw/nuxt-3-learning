@@ -1,5 +1,5 @@
 <template>
-    <div class="post-container py-8">
+    <div class="post-container pt-6">
         <h3 class="text-3xl font-bold">
             <NuxtLink :to="`/posts/${props.post.id}`" class="line-clamp-1">
                 {{ props.post.title }}
@@ -8,7 +8,7 @@
         <div class="post-meta text-gray-700 flex items-center space-x-2">
             <div>{{ moment(new Date()).format('ll') }}</div>
             <div>&middot;</div>
-            <div>{{ props.post.userId }}</div>
+            <div>{{ props.post.id }}</div>
         </div>
         <div class="post-preview leading-relaxed mt-4 line-clamp-3">
             {{ props.post.body }}
