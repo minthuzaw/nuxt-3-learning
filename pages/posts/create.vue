@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto w-1/2 py-8">
+  <div class="container mx-auto w-full md:w-1/2 lg:w-1/2 py-8 px-6">
     <Title>Post create | {{ headTitle }}</Title>
     <div v-if="error" class="errors text-red-500 mb-4">Error goes here</div>
     <form action="#" class="space-y-6" @submit.prevent="createPost">

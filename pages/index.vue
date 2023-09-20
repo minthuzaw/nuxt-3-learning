@@ -2,7 +2,8 @@
   <div v-if="isLoading" class="text-center mt-5">
     Loading ...
   </div>
-  <div ref="scrollComponent" class="container mx-auto w-1/2 divide-y space-y-8 divide-gray-300">
+  <Carousel v-if="!isLoading"/>
+  <div ref="scrollComponent" class="container mx-auto w-full md:w-1/2 lg:w-1/2 divide-y space-y-8 divide-gray-300">
     <PostItem v-for="post in items" :key="post.id" :post="post"></PostItem>
   </div>
   <div v-if="loadMore" class="text-center mt-5">

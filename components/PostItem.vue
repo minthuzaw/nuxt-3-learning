@@ -1,5 +1,5 @@
 <template>
-    <div class="post-container pt-6">
+    <div class="post-container pt-6 px-5">
         <h3 class="text-3xl font-bold">
             <NuxtLink :to="`/posts/${props.post.id}`" class="line-clamp-1">
                 {{ props.post.title }}

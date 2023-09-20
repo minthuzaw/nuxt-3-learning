@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto w-1/2 py-8">
+  <div class="container mx-auto w-full md:w-1/2 lg:w-1/2 py-8 px-6">
     <Title>{{ post.id }}| {{ title }}</Title>
     <h3 class="text-3xl font-bold">
       <NuxtLink :to="`/posts/${post.id}`">
