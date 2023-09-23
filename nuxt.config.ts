@@ -9,5 +9,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss'
-  ]
+  ],
+  experimental: {
+    /**
+     * see: https://v3.nuxtjs.org/api/configuration/nuxt.config#inlinessrstyles
+     */
+    inlineSSRStyles: false
+  },
 })
