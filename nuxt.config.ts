@@ -5,6 +5,7 @@ export default defineNuxtConfig({
       baseUrl: process.env.BASE_URL,
     },
   },
+  css: ['remixicon/fonts/remixicon.css'],
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss'
