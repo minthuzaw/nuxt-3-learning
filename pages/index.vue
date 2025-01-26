@@ -1,15 +1,21 @@
 <template>
-  <div v-if="isLoading" class="text-center mt-5">
-    Loading ...
-  </div>
-  <Carousel v-if="!isLoading"/>
-  <div ref="scrollComponent" class="container mx-auto w-full md:w-1/2 lg:w-1/2 divide-y space-y-8 divide-gray-300">
-    <PostItem v-for="post in items" :key="post.id" :post="post"></PostItem>
-  </div>
-  <div v-if="loadMore" class="text-center mt-5">
-    Loading ...
+  <div>
+    <div v-if="isLoading" class="text-center mt-5">
+      Loading ...
+    </div>
+    <Carousel v-if="!isLoading" />
+    <div
+      ref="scrollComponent"
+      class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 divide-y md:divide-y-0 divide-gray-300"
+    >
+      <PostItem v-for="post in items" :key="post.id" :post="post"></PostItem>
+    </div>
+    <div v-if="loadMore" class="text-center mt-5">
+      Loading ...
+    </div>
   </div>
 </template>
+
 
 <script setup>
 const page = ref(0)
@@ -52,3 +58,9 @@ const onScroll = (event) => {
   nextPage()
 }
 </script>
+
+<style>
+::-webkit-scrollbar {
+    display: none;
+}
+</style>
